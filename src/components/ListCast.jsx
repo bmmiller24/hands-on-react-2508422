@@ -21,7 +21,10 @@ export default ({onChoice}) => {
     }}>
       {
         cast.map(member => (
-          <a onClick={ () => {onChoice(member)}} key={member.id} data-tooltip={member.name}>
+          <a onClick={ () => {onChoice(member)}} 
+             key={member.id} 
+             data-tooltip={member.name}
+             style={{cursor: "pointer"}}>
             <img src={`images/${member.slug}_tn.svg`} alt={member.name} />
           </a>
         ))
