@@ -3,6 +3,8 @@ import ListCast from './components/ListCast';
 import Modals from './components/Modals';
 import Nav from './components/Nav';
 
+import "./App.css";
+
 function App() {
   let [memberInfo, setMemberInfo] = useState(null);
   const [cast, setCast] = useState([]);
