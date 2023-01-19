@@ -17,7 +17,7 @@ export default ({cast, member, handleClose, handlePrevNext}) => {
           }
           return false;
          }} 
-         role="button">&lt;</a>
+         role="button"><span className="material-symbols-outlined">arrow_back</span></a>
 
       <article>
         <a href="#close" 
@@ -55,7 +55,7 @@ export default ({cast, member, handleClose, handlePrevNext}) => {
           }
           return false;
          }} 
-         role="button">&gt;</a>
+         role="button"><span className="material-symbols-outlined">arrow_forward</span></a>
     </dialog>
   ) 
 }
