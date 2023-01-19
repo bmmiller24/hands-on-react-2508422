@@ -3,7 +3,7 @@ import ListCast from './components/ListCast';
 import Modals from './components/Modals';
 import Nav from './components/Nav';
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   let [memberInfo, setMemberInfo] = useState(null);
