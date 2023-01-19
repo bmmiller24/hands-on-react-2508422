@@ -17,7 +17,13 @@ export default ({cast, onChoice}) => {
         </li>
       </ul>
       <ul>
-        <li><a href="#"><img style={{height: '50px'}} src="images/logo_bug_stargazers.svg" alt="StarGazers Logo" /></a></li>
+        <li>
+          <a href="#">
+            <img style={{height: '50px'}} 
+                src="images/logo_bug_stargazers.svg" 
+                alt="StarGazers Logo" />
+          </a>
+        </li>
       </ul>
     </nav>
     

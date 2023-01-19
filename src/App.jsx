@@ -26,7 +26,11 @@ function App() {
           <p>Members of an <b>intergalactic alliance</b> paving the way for peace and benevolence among all species. They are known for their enthusiasm for science, for their love of fun, and their dedication to education.</p>
           <ListCast cast={cast} onChoice={(info) => { setMemberInfo(info) }} />
           {memberInfo &&
-            <Modals member={memberInfo} handleClose={() => setMemberInfo(null)} />
+            <Modals 
+                    member={memberInfo} 
+                    cast={cast} 
+                    handleClose={() => setMemberInfo(null)}
+                    handlePrevNext={(idx) => setMemberInfo(cast[idx])} />
           }
         </hgroup>
       </div>

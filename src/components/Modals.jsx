@@ -1,6 +1,24 @@
-export default ({member, handleClose}) => {
+import { useState, useEffect } from "react"
+
+export default ({cast, member, handleClose, handlePrevNext}) => {
+  
   return (
     <dialog id="modal-member" open>
+      <a href="#" 
+         onClick={(event) => {
+          event.preventDefault();
+          let memberIdx = Number(member.id);
+          { if(memberIdx > 0){
+             handlePrevNext(memberIdx - 1);
+            }
+            else {
+              handlePrevNext(cast.length - 1);
+            } 
+          }
+          return false;
+         }} 
+         role="button">&lt;</a>
+
       <article>
         <a href="#close" 
            aria-label="Close"
@@ -23,6 +41,21 @@ export default ({member, handleClose}) => {
           </div>
         </hgroup>
       </article>
+      
+      <a href="#"
+         onClick={(event) => {
+          event.preventDefault();
+          let memberIdx = Number(member.id);
+          { if (memberIdx < (cast.length - 1)) {
+              handlePrevNext(memberIdx + 1);
+            }
+            else {
+              handlePrevNext(0);
+            }
+          }
+          return false;
+         }} 
+         role="button">&gt;</a>
     </dialog>
   ) 
 }
